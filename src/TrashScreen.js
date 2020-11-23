@@ -49,36 +49,38 @@ export default class TrashScreen extends React.Component {
         } catch (error) {
             this.setState({ isInnerLoading: false });
         }
-        if(parsed.deleted.length !==0){
+        if (parsed.deleted.length !== 0) {
             this.setState({ Loading: false, dataList: parsed.deleted })
-        }else{
-            this.setState({ Loading: false}) 
+        } else {
+            this.setState({ Loading: false })
         }
-        
+
         AsyncStorage.setItem('deleted', JSON.stringify({ deleted: [] }));
         this.listView()
     }
     listView = () => {
-        return (<View> 
-                <FlatList
-                    data={this.state.dataList}
-                    keyExtractor={(item) => item.id}
-                    renderItem={({ item }) => {return(
+        return (<View>
+            <FlatList
+                data={this.state.dataList}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => {
+                    return (
                         <View style={styles.viewList}>
                             <Text style={styles.text}>
                                 {item.text}
                             </Text>
                         </View>
 
-                    )}}
-                    ItemSeparatorComponent={() => <Separator />}
-                />
+                    )
+                }}
+                ItemSeparatorComponent={() => <Separator />}
+            />
         </View>)
 
     }
 
     render() {
-        let {  Loading } = this.state
+        let { Loading } = this.state
         if (Loading) {
             return (
                 <View style={styles.container}>

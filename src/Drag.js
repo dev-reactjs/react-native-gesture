@@ -67,9 +67,9 @@ export default class DragList extends React.Component {
   constructor(props) {
     super(props);
     Animated.timing(this.point, {
-        toValue: 100,
-        duration: 50,
-        useNativeDriver: true
+      toValue: 100,
+      duration: 50,
+      useNativeDriver: true
     }).start();
     this._panResponder = PanResponder.create({
       // Ask to be the responder:
@@ -205,7 +205,7 @@ export default class DragList extends React.Component {
               backgroundColor: "black",
               zIndex: 2,
               width: "100%",
-            //   top: this.point.getLayout().top
+              //   top: this.point.getLayout().top
             }}
           >
             {renderItem({ item: data[draggingIdx], index: -1 }, true)}

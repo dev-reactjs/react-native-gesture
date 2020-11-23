@@ -42,19 +42,19 @@ const RightActions = ({ progress, dragX, onPress }) => {
     );
 };
 
-export const ListItem = ({ text, onSwipeFromLeft, onRightPress }) =>{
-    return(
+export const ListItem = ({ text, onSwipeFromLeft, onRightPress }) => {
+    return (
         <Swipeable
-        renderLeftActions={LeftActions}
-        onSwipeableLeftOpen={onSwipeFromLeft}
-        renderRightActions={(progress, dragX) => (
-            <RightActions progress={progress} dragX={dragX} onPress={onRightPress} />
-        )}
-    >
-        <View style={styles.container}>
-            <Text style={styles.text}>{text}</Text>
-        </View>
-    </Swipeable>
+            renderLeftActions={LeftActions}
+            onSwipeableLeftOpen={onSwipeFromLeft}
+            renderRightActions={(progress, dragX) => (
+                <RightActions progress={progress} dragX={dragX} onPress={onRightPress} />
+            )}
+        >
+            <View style={styles.container}>
+                <Text style={styles.text}>{text}</Text>
+            </View>
+        </Swipeable>
     )
 }
 

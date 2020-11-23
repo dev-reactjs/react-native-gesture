@@ -23,14 +23,14 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Swiper  from "./src/Swiper";
+import Swiper from "./src/Swiper";
 import AppNavigation from "./src/Navigation"
 import DragList from "./src/Drag"
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-        <DragList/>
+      <DragList />
     </>
   );
 };

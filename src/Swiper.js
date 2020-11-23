@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, FlatList } from 'react-native';
-import  {ListItem, Separator } from "./Listitem";
+import { ListItem, Separator } from "./Listitem";
 import AsyncStorage from '@react-native-community/async-storage';
 const styles = StyleSheet.create({
   container: {
@@ -10,26 +10,26 @@ const styles = StyleSheet.create({
 });
 
 export default class Swiper extends React.Component {
-    constructor(props){
-        super(props)
-        this.state={
-            dataList:quotes,
-            pushedData:[]
-        }
+  constructor(props) {
+    super(props)
+    this.state = {
+      dataList: quotes,
+      pushedData: []
     }
-    componentDidMount(){
-        AsyncStorage.setItem('deleted',JSON.stringify({deleted:this.state.pushedData}));
-    }
-    handleLeft=(id)=>{
-        const newData=[...this.state.dataList]
-        const Index= this.state.dataList.findIndex(item=>item.id===id)
-        const deleted =newData.splice(Index,1)
-        this.setState({dataList:newData})
-        this.state.pushedData.push(deleted[0])
-        AsyncStorage.setItem('deleted',JSON.stringify({deleted:this.state.pushedData}));
-    }
+  }
+  componentDidMount() {
+    AsyncStorage.setItem('deleted', JSON.stringify({ deleted: this.state.pushedData }));
+  }
+  handleLeft = (id) => {
+    const newData = [...this.state.dataList]
+    const Index = this.state.dataList.findIndex(item => item.id === id)
+    const deleted = newData.splice(Index, 1)
+    this.setState({ dataList: newData })
+    this.state.pushedData.push(deleted[0])
+    AsyncStorage.setItem('deleted', JSON.stringify({ deleted: this.state.pushedData }));
+  }
   render() {
-      const {dataList}=this.state
+    const { dataList } = this.state
     return (
       <SafeAreaView style={styles.container}>
         <FlatList

@@ -12,10 +12,10 @@ export default function AppNavigation() {
     return (
         <NavigationContainer>
             <Tab.Navigator tabBarOptions={{
-               labelStyle: {
-                fontSize: 20,
-                paddingBottom: 5,
-              },
+                labelStyle: {
+                    fontSize: 20,
+                    paddingBottom: 5,
+                },
             }}>
                 <Tab.Screen name="ListData" component={Swiper} />
                 <Tab.Screen name="Trash" component={TrashScreen} />
