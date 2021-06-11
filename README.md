@@ -2,7 +2,7 @@
 
 <h1>react-native-swipe-gestures</h1></br>
 
-<img src='./gif.gif' alt='video' height='720 />
+<img src='./video.gif' alt='video' height='720 />
 
 React Native component for handling swipe gestures in up, down, left and right direction.</br>
 Also Handling Drag and Drop of component using Pan Responder.
