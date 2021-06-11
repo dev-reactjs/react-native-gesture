@@ -2,7 +2,7 @@
 
 <h1>react-native-swipe-gestures</h1></br>
 
-![ScreenShot](https://raw.github.com/dev-reactjs/react-hooks-task/master/src/assets/gif.gif)
+![caption](https://raw.github.com/dev-reactjs/react-hooks-task/master/src/assets/gif.gif)
 
 React Native component for handling swipe gestures in up, down, left and right direction.</br>
 Also Handling Drag and Drop of component using Pan Responder.
